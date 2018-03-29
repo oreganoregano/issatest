@@ -1,0 +1,85 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #239fdc;
+  height: 50px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.deleteButton {
+  visibility: hidden;
+  float: right;
+  margin: 5px;
+  font-size: 26px;
+  cursor: pointer;
+  color: red;
+}
+
+.tile:hover .deleteButton {
+  visibility: visible;
+}
+.tile:hover{
+  box-shadow: 10px 10px;
+}
+
+.tile {
+  width: 180px;
+  height: 180px;
+  margin: 10px;
+  background: #76b839;
+  float: left;
+  font-size: 14px;
+  text-align: left;
+  justify-content: center;
+}
+.tile-object{
+  padding: 10px;
+}
+.input {
+  border: none;
+  border-bottom: 1px solid;
+  background: none;
+  outline: none;
+  margin-top:10px;
+  width: 150px;
+  font-size: 14px;
+}
+
+.input:focus {
+  border: solid 1px;
+}
+
+button{
+  height: 50px;
+  width: 200px;
+  font-size: 16px;
+  background-color: #76b839;
+  border: none;
+  margin: 5px;
+}
+
+button:hover{
+  box-shadow: 10px 10px;
+  font-weight: bold;
+}
+
+.employeeContainer{
+  width: 820px;
+  margin: 0 auto;
+}
