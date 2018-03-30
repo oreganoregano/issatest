@@ -29,7 +29,7 @@ class EmployeeForm extends Component {
       manager_id: this.state.manager_id
     };
     axios.put(
-      `http://localhost:3001/api/v1/employees/${this.props.employee.id}`,
+      `https://employee-rails-leaf.herokuapp.com/api/v1/employees/${this.props.employee.id}`,
       {
         employee
       })

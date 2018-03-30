@@ -16,7 +16,7 @@ class TreeContainer extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3001/api/v1/employees.json')
+    axios.get('https://employee-rails-leaf.herokuapp.com/api/v1/employees.json')
     .then(response => {
       console.log(response);
       this.setState({ employees: response.data });
@@ -26,7 +26,7 @@ class TreeContainer extends Component {
 
   addNewEmployee = () => {
     axios.post(
-      'http://localhost:3001/api/v1/employees',
+      'https://employee-rails-leaf.herokuapp.com/api/v1/employees',
       { employee:
         {
           title: '',
@@ -75,7 +75,7 @@ class TreeContainer extends Component {
   }
 
   deleteEmployee = (id) => {
-    axios.delete(`http://localhost:3001/api/v1/employees/${id}`)
+    axios.delete(`https://employee-rails-leaf.herokuapp.com/api/v1/employees/${id}`)
     .then(response => {
       const employeeIndex = this.state.employees.findIndex(x => x.id === id)
       const employees = update(this.state.employees, { $splice: [[employeeIndex, 1]] });
@@ -89,9 +89,7 @@ class TreeContainer extends Component {
       <div>
         <p>To edit an employee, simply click on its card and edit. To delete an
           employee, hover over the box and click the red X.</p>
-        <button
-          onClick={this.addNewEmployee}
-        >
+        <button onClick={this.addNewEmployee} >
           Add New Employee
         </button>
         <span className="notification">
